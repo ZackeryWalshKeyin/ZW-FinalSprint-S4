@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Previous Trees</title>
+</head>
+<body>
+<h1>Previous Binary Search Trees</h1>
+<ul>
+    <li th:each="tree : ${trees}">
+        <p>BST ID: <span th:text="${tree.id}"></span></p>
+        <p>Numbers: <span th:text="${#strings.arrayJoin(tree.numbers, ', ')}"></span></p>
+        <p>Tree Structure: <pre th:text="${tree.treeStructure}"></pre></p>
+    </li>
+</ul>
+<a href="/enter-numbers">Enter New Numbers</a>
+</body>
+</html>

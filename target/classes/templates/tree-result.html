@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tree Result</title>
+</head>
+<body>
+    <h1>Binary Search Tree Result</h1>
+    <p>Numbers: <span th:text="${#strings.arrayJoin(tree.numbers, ', ')}"></span></p>
+    <p>Tree Structure:</p>
+    <pre th:text="${tree.treeStructure}"></pre>
+    <a href="/enter-numbers">Enter More Numbers</a>
+    <a href="/previous-trees">View Previous Trees</a>
+</body>
+</html>
